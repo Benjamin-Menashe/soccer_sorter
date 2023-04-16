@@ -58,9 +58,9 @@ def main():
         st.write("Sort into teams:")
         for i in range(3):
             st.write('------------------------------')
-            st.subheader(f"team {i+1}:")
-            IDs_str = " ".join(str(IDs[i][j]) for j in range(7))
-            st.subheader(IDs_str)
+            st.write(f"**team {i+1}:**")
+            IDs_str = ", ".join(str(IDs[i][j]) for j in range(7))
+            st.write(f"**{IDs_str}**")
             st.write(f"mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
         st.write('------------------------------')
 
