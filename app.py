@@ -63,11 +63,6 @@ def main():
             st.subheader(IDs_str)
             st.write(f"mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
         st.write('------------------------------')
-    
-    if st.button("show values:"):
-        for i in range(3):
-            st.write(f"team {i+1}:")
-            st.write(f"mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
 
 if __name__ == "__main__":
     main()
