@@ -53,7 +53,7 @@ def main():
                 loss_pre = loss_post
                 IDs[tm_ind[0]][plr_ind[0]],IDs[tm_ind[1]][plr_ind[1]] = IDs[tm_ind[1]][plr_ind[1]],IDs[tm_ind[0]][plr_ind[0]]
             jj += 1
-
+            
         st.write("Optimized Teams:")
         for i in range(3):
             st.write('------------------------------')
@@ -61,11 +61,13 @@ def main():
             IDs_str = " ".join(str(IDs[i][j]) for j in range(7))
             st.subheader(IDs_str)
             st.write(f"mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
+        st.write('------------------------------')
         
-        
-        if st.button("Copy IDs to Clipboard"):
-            st.write("IDs variable copied to clipboard!")
-            pyperclip.copy(str(IDs))
+                            
+    if st.button("Copy IDs to Clipboard"):
+        st.write("IDs variable copied to clipboard!")
+        pyperclip.copy(str(IDs))
+
 
 if __name__ == "__main__":
     main()
