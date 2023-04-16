@@ -18,6 +18,7 @@ def main():
     playing = {}
     names_list = st.text_area("Paste a list of names here, separated by a new line, and press 'ctrl+enter' or click anywhere, or else enter names manually into the table below. make sure there are no repeating names.")
     names_list = names_list.split("\n")
+    names_list = names_list.translate(str.maketrans('', '', '0123456789.'))
     player_table = st.container()
     with player_table:
         st.write("Rank players:")
@@ -31,7 +32,7 @@ def main():
                 else:
                     name = st.text_input(f"Name {i}")
             with col2:
-                number = st.number_input(f"Rank {name}", value=0)
+                number = st.number_input(f"Rank {i} {name}", value=0)
             if name:
                 playing[name] = number
 
@@ -58,7 +59,6 @@ def main():
         for i in range(3):
             st.write('------------------------------')
             IDs_str = ", ".join(str(IDs[i][j]) for j in range(7))
-            IDs_str = IDs_str.translate(str.maketrans('', '', '0123456789.'))
             st.write(f"**Team {i+1}:  \n{IDs_str}**")
         st.write('------------------------------')
         for i in range(3):
