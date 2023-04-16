@@ -21,9 +21,9 @@ def main():
         for i in range(1, 22):
             col1, col2 = st.beta_columns(2)
             with col1:
-                name = st.text_input(f"Name {i}")
+                name = st.text_input()
             with col2:
-                number = st.number_input(f"Number {i}", value=0)
+                number = st.number_input(value=0)
             if name:
                 playing[name] = number
 
