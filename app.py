@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 import pyperclip
-import re
 
 def Eval_loss(teams):
     vec_m = (np.mean(teams, axis=1) - (np.mean(teams)))
@@ -66,8 +65,7 @@ def main():
         st.write('------------------------------')
         
         if st.button("nice format"):
-            clean = re.sub(r'[0-9.]', '', str(IDs))
-            st.write(clean)
+            st.write(str(IDS))
             
 if __name__ == "__main__":
     main()
