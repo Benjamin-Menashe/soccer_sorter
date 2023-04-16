@@ -1,3 +1,6 @@
 streamlit
 numpy
 pyperclip
+bokeh.models.widgets
+bokeh.models
+streamlit_bokeh_events
