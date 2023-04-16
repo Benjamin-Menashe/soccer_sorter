@@ -16,11 +16,6 @@ def main():
     playing = {}
     names_list = st.text_area("Paste a list of names here, separated by a new line", "")
     names_list = names_list.split("\n")
-    for i in range(21):
-
-        number = st.number_input(f"Number {i+1}")
-        playing[name] = number
-    
     player_table = st.beta_container()
     with player_table:
         st.write("Enter player names and numbers. make sure there are no repeating names:")
@@ -29,7 +24,8 @@ def main():
             col1, col2 = st.beta_columns(2)
             with col1:
                 if i < len(names_list):
-                    name = names_list[i].strip()
+                    cur_name = names_list[i].strip()
+                    name = st.text_input(f"Name {i}", value=cur_name)                    
                 else:
                     name = st.text_input(f"Name {i}")
             with col2:
