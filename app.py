@@ -17,8 +17,8 @@ def main():
     IDs = []
     playing = {}
     names_list = st.text_area("Paste a list of names here, separated by a new line, and press 'ctrl+enter' or click anywhere, or else enter names manually into the table below. make sure there are no repeating names.")
-    names_list = names_list.split("\n")
     names_list = names_list.translate(str.maketrans('', '', '0123456789.'))
+    names_list = names_list.split("\n")
     player_table = st.container()
     with player_table:
         st.write("Rank players:")
