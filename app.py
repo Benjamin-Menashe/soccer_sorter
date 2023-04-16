@@ -15,6 +15,7 @@ def main():
     st.write("*Created by Benjamin Menashe*")
     st.subheader("This app will randomly sort 21 players into 3 fair teams based on their number rankings.")
 
+    IDs = []
     playing = {}
     names_list = st.text_area("Paste a list of names here, separated by a new line, and press 'ctrl+enter' or click anywhere, or else enter names manually into the table below. make sure there are no repeating names.")
     names_list = names_list.split("\n")
