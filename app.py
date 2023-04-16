@@ -23,8 +23,8 @@ def main():
         for i in range(1, 22):
             col1, col2 = st.beta_columns(2)
             with col1:
-                if i < len(names_list):
-                    cur_name = names_list[i].strip()
+                if (i-1) < len(names_list):
+                    cur_name = names_list[(i-1)].strip()
                     name = st.text_input(f"Name {i}", value=cur_name)                    
                 else:
                     name = st.text_input(f"Name {i}")
