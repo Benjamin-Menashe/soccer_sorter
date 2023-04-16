@@ -49,9 +49,9 @@ def main():
         st.write("Optimized Teams:")
         for i in range(3):
             st.write('------------------------------')
-            st.subheader(f"team {i+1}:", height=2000)
+            st.subheader(f"team {i+1}:")
             IDs_str = " ".join(str(IDs[i][j]) for j in range(7))
-            st.subheader(IDs_str, height=2000)
+            st.subheader(IDs_str)
             st.write(np.round(np.mean(teams[i]),2), np.round(np.std(teams[i]),2))
 
 if __name__ == "__main__":
