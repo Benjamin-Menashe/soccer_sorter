@@ -63,12 +63,10 @@ def main():
             st.subheader(IDs_str)
             st.write(f"mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
         st.write('------------------------------')
-        
                             
     if st.button("Copy IDs to Clipboard"):
         st.write("IDs variable copied to clipboard!")
         pyperclip.copy(str(IDs))
-
 
 if __name__ == "__main__":
     main()
