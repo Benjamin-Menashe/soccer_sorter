@@ -69,7 +69,7 @@ def main():
             st.write(f"mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
         st.write('------------------------------')
         
-        IF st.button("Copy Team IDs"):
+        if st.button("Copy Team IDs"):
             text_to_be_copied = "Some text"
             copy_dict = {"content": text_to_be_copied}
             
