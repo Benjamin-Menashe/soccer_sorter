@@ -59,10 +59,12 @@ def main():
             st.write('------------------------------')
             st.write(f"**Team {i+1}:**")
             IDs_str = ", ".join(str(IDs[i][j]) for j in range(7))
+            IDs_str = np.char.replace(IDs_str, np.arange(10).astype(str), '')
+            IDs_str = np.char.replace(IDs_str, '.', '')
             st.write(f"**{IDs_str}**")
         st.write('------------------------------')
         for i in range(3):
-            st.write(f"team {i+1} stats: mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
+            st.write(f"team {i+1}: mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
 
             
 if __name__ == "__main__":
