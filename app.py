@@ -50,7 +50,7 @@ def main():
         for i in range(3):
             st.write('------------------------------')
             st.write(f"team {i+1}:")
-            IDs_str = " ".join(str(IDs[i][j]) for i in range(3) for j in range(7))
+            IDs_str = " ".join(str(IDs[i][j]) for j in range(7))
             st.write(IDs_str)
             st.write(np.round(np.mean(teams[i]),2), np.round(np.std(teams[i]),2))
 
