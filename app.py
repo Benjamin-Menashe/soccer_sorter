@@ -14,11 +14,11 @@ def main():
     st.write("This app will randomly sort 21 players into 3 fair teams based on their number rankings.")
 
     playing = {}
-    names_list = st.text_area("Paste a list of names here, separated by a new line", "")
+    names_list = st.text_area("Paste a list of names here, separated by a new line, and press 'ctrl+enter'. or else enter names manually into the table below:")
     names_list = names_list.split("\n")
     player_table = st.beta_container()
     with player_table:
-        st.write("Enter player names and numbers. make sure there are no repeating names:")
+        st.write("Rank players. make sure there are no repeating names:")
         playing = {}
         for i in range(1, 22):
             col1, col2 = st.beta_columns(2)
