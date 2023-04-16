@@ -2,11 +2,6 @@ import streamlit as st
 import numpy as np
 import pyperclip
 
-from bokeh.models.widgets import Button
-from bokeh.models import CustomJS
-from streamlit_bokeh_events import streamlit_bokeh_events
-
-
 def Eval_loss(teams):
     vec_m = (np.mean(teams, axis=1) - (np.mean(teams)))
     loss_m = np.linalg.norm(vec_m)
@@ -68,21 +63,6 @@ def main():
             st.write(f"**{IDs_str}**")
             st.write(f"mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
         st.write('------------------------------')
-        
-        if st.button("Copy Team IDs"):
-            text_to_be_copied = "Some text"
-            copy_dict = {"content": text_to_be_copied}
-            
-            copy_button = Button(label="Copy Text")
-            copy_button.js_on_event("button_click", CustomJS(args=copy_dict, code="""navigator.clipboard.writeText(content);"""))
-            
-            no_event = streamlit_bokeh_events(
-                copy_button,
-                events="GET_TEXT",
-                key="get_text",
-                refresh_on_update=True,
-                override_height=75,
-                debounce_time=0)
 
 if __name__ == "__main__":
     main()
