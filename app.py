@@ -59,8 +59,7 @@ def main():
             st.write('------------------------------')
             st.write(f"**Team {i+1}:**")
             IDs_str = ", ".join(str(IDs[i][j]) for j in range(7))
-            IDs_str = IDs_str.replace(".","")
-            IDs_str = IDs_str.replace(np.arange(10).astype(str),"")
+            IDs_str = IDs_str.translate(str.maketrans('', '', '0123456789.'))
             st.write(f"**{IDs_str}**")
         st.write('------------------------------')
         for i in range(3):
