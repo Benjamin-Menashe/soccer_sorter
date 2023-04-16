@@ -23,7 +23,7 @@ def main():
             with col1:
                 name = st.text_input(f"Name {i}")
             with col2:
-                number = st.number_input(f"Number {i}", value=int)
+                number = st.number_input(f"Number {i}", value=0)
             if name:
                 playing[name] = number
 
