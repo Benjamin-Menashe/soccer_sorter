@@ -1,6 +1,5 @@
 import streamlit as st
 import numpy as np
-import pyperclip
 
 def Eval_loss(teams):
     vec_m = (np.mean(teams, axis=1) - (np.mean(teams)))
