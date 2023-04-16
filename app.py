@@ -59,7 +59,7 @@ def main():
             st.subheader(f"team {i+1}:")
             IDs_str = " ".join(str(IDs[i][j]) for j in range(7))
             st.subheader(IDs_str)
-            st.write(np.round(np.mean(teams[i]),2), np.round(np.std(teams[i]),2))
+            st.write(f"mean: {np.round(np.mean(teams[i]),2)}, sd={np.round(np.std(teams[i]),2}"))
 
 if __name__ == "__main__":
     main()
