@@ -31,7 +31,7 @@ def main():
                 else:
                     name = st.text_input(f"Name {i}")
             with col2:
-                number = st.number_input(f"Rank {i} {name}", value=0)
+                number = st.number_input(f"Rank {name}", value=0)
             if name:
                 playing[name] = number
 
