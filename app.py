@@ -63,6 +63,7 @@ def main():
             st.write(f"**{IDs_str}**")
             st.write(f"mean={np.round(np.mean(teams[i]),2)} sd={np.round(np.std(teams[i]),2)}")
         st.write('------------------------------')
+        st.button("Copy Team IDs", on_click=lambda: pyperclip.copy(np.array2string(IDs, separator=', ')))
 
 if __name__ == "__main__":
     main()
