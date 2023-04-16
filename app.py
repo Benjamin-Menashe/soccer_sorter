@@ -11,6 +11,7 @@ def Eval_loss(teams):
 
 def main():
     st.title("Soccer Team Sorter App")
+    st.write("*Created by Benjamin Menashe*")
     st.subheader("This app will randomly sort 21 players into 3 fair teams based on their number rankings.")
 
     playing = {}
